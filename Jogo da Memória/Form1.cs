@@ -9,7 +9,7 @@ namespace Jogo_da_Memória
         List<string> icons = new List<string>()
         {
             "!", "!", "N", "N", ",", ",", "K", "K",
-            "b", "b", "v", "v", "w", "w", "z", "z"
+            "b", "b", "v", "v", "$", "$", "z", "z"
         };
 
         Label? firstClicked = null;
@@ -20,6 +20,7 @@ namespace Jogo_da_Memória
             InitializeComponent();
             CriarLabelsAutomaticamente();
             AssignIconsToSquares();
+
 
 
             timer1.Interval = 750; // tempo de exibição das cartas antes de esconder
@@ -146,14 +147,6 @@ namespace Jogo_da_Memória
                 if (iconLabel != null && iconLabel.ForeColor == iconLabel.BackColor)
                     return;
             }
-
-            MessageBox.Show("Você emparelhou todos os ícones!", "Parabéns!");
-            Close();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

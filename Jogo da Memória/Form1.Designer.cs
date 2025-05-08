@@ -260,8 +260,7 @@
             ClientSize = new Size(765, 466);
             Controls.Add(tableLayoutPanel1);
             Name = "Form1";
-            Text = "Jogo da Memória";
-            Load += Form1_Load;
+            Text = "Nível 1";
             tableLayoutPanel1.ResumeLayout(false);
             ResumeLayout(false);
         }

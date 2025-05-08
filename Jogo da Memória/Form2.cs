@@ -14,14 +14,7 @@ namespace Jogo_da_Memória
     {
         Random random = new Random();
 
-        List<string> icons = new List<string>()
-        {
-            "!", "!", "N", "N", ",", ",", "K", "K",
-            "b", "b", "v", "v", "w", "w", "z", "z",
-            "h", "h", "f", "f", "s", "s", "x", "x",
-            "A", "A", "B", "B", "C", "C", "D", "D",
-            "E", "E", "F", "F"
-        };
+        List<string> icons;
 
 
         Label? firstClicked = null;
@@ -43,8 +36,10 @@ namespace Jogo_da_Memória
             }
         }
 
-        public Form2()
+        // icons deve sempre ter uma quantidade de elemento com raiz quadrada exata. exemplo.. 4, 9, 16, 25, 36, 49...
+        public Form2(List<string> icons)
         {
+            this.icons = icons;
             InitializeComponent();
             CriarLabelsAutomaticamente();
             AssignIconsToSquares();
@@ -55,8 +50,8 @@ namespace Jogo_da_Memória
 
         private void CriarLabelsAutomaticamente()
         {
-            int rows = 6;
-            int cols = 6;
+            int rows = (int) Math.Sqrt(this.icons.Count);
+            int cols = (int) Math.Sqrt(this.icons.Count);
             int count = 1;
 
             // Garante que o painel esteja limpo

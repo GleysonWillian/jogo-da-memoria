@@ -534,7 +534,7 @@
             ClientSize = new Size(837, 395);
             Controls.Add(tableLayoutPanel1);
             Name = "Form2";
-            Text = "Form2";
+            Text = "Nível2";
             Load += Form2_Load;
             tableLayoutPanel1.ResumeLayout(false);
             ResumeLayout(false);
