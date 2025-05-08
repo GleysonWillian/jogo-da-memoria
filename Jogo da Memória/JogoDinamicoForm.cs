@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Jogo_da_Memória
 {
-    public partial class Form2 : Form
+    public partial class JogoDinamicoForm : Form
     {
         Random random = new Random();
 
@@ -37,7 +37,7 @@ namespace Jogo_da_Memória
         }
 
         // icons deve sempre ter uma quantidade de elemento com raiz quadrada exata. exemplo.. 4, 9, 16, 25, 36, 49...
-        public Form2(List<string> icons)
+        public JogoDinamicoForm(List<string> icons)
         {
             this.icons = icons;
             InitializeComponent();
@@ -76,7 +76,7 @@ namespace Jogo_da_Memória
                     lbl.Text = "?";
                     lbl.Dock = DockStyle.Fill;
                     lbl.TextAlign = ContentAlignment.MiddleCenter;
-                    lbl.Font = new Font("Arial", 24, FontStyle.Bold);
+                    lbl.Font = new Font("Webdings", 40, FontStyle.Bold);
                     lbl.BackColor = Color.CornflowerBlue;
                     lbl.BorderStyle = BorderStyle.FixedSingle;
 

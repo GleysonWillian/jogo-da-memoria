@@ -1,6 +1,6 @@
 ﻿namespace Jogo_da_Memória
 {
-    partial class Form3
+    partial class MenuForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,74 +28,75 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuForm));
             label1 = new Label();
             button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
+            groupBox1 = new GroupBox();
+            cmbNivel = new ComboBox();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
             label1.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(281, 71);
+            label1.Location = new Point(127, 98);
             label1.Name = "label1";
             label1.Size = new Size(212, 29);
             label1.TabIndex = 0;
             label1.Text = "Jogo da Memória";
             label1.TextAlign = ContentAlignment.MiddleCenter;
-            label1.Click += label1_Click;
             // 
             // button1
             // 
+            button1.BackColor = Color.MediumSeaGreen;
             button1.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(316, 128);
+            button1.Location = new Point(146, 278);
             button1.Name = "button1";
-            button1.Size = new Size(111, 35);
+            button1.Size = new Size(170, 79);
             button1.TabIndex = 1;
             button1.Text = "Iniciar";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
-            // button2
+            // groupBox1
             // 
-            button2.Location = new Point(189, 188);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 2;
-            button2.Text = "Nível 1";
-            button2.UseVisualStyleBackColor = true;
+            groupBox1.BackColor = Color.Transparent;
+            groupBox1.Controls.Add(cmbNivel);
+            groupBox1.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            groupBox1.Location = new Point(63, 144);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(329, 119);
+            groupBox1.TabIndex = 3;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Seleção de Nível";
             // 
-            // button3
+            // cmbNivel
             // 
-            button3.Location = new Point(333, 188);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 3;
-            button3.Text = "Nível 2";
-            button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            button4.Location = new Point(475, 188);
-            button4.Name = "button4";
-            button4.Size = new Size(75, 23);
-            button4.TabIndex = 4;
-            button4.Text = "Nível 3";
-            button4.UseVisualStyleBackColor = true;
+            cmbNivel.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbNivel.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cmbNivel.FormattingEnabled = true;
+            cmbNivel.Items.AddRange(new object[] { "Fácil", "Normal", "Difícil" });
+            cmbNivel.Location = new Point(20, 33);
+            cmbNivel.Name = "cmbNivel";
+            cmbNivel.Size = new Size(290, 53);
+            cmbNivel.TabIndex = 0;
             // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(892, 587);
+            Controls.Add(groupBox1);
             Controls.Add(button1);
             Controls.Add(label1);
+            DoubleBuffered = true;
             Name = "Form3";
             Text = "Menu";
+            groupBox1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -104,8 +105,7 @@
 
         private Label label1;
         private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
+        private GroupBox groupBox1;
+        private ComboBox cmbNivel;
     }
 }

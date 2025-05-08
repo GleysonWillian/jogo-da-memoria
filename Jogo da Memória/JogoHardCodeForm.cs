@@ -2,7 +2,7 @@ using System.Windows.Forms;
 
 namespace Jogo_da_Memória
 {
-    public partial class Form1 : Form
+    public partial class JogoHardCodeForm : Form
     {
         Random random = new Random();
 
@@ -15,7 +15,7 @@ namespace Jogo_da_Memória
         Label? firstClicked = null;
         Label? secondClicked = null;
 
-        public Form1()
+        public JogoHardCodeForm()
         {
             InitializeComponent();
             CriarLabelsAutomaticamente();
