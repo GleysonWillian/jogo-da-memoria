@@ -25,16 +25,9 @@ namespace Jogo_da_Memória
 
         List<string> iconsDificil = new List<string>()
         {
-             "!", "!", "N", "N", ",", ",", "K", "K",
-            "b", "b", "v", "v", "w", "w", "z", "z",
-            "h", "h", "f", "f", "s", "s", "x", "x",
-            "A", "A", "B", "B", "C", "C", "D", "D",
-            "E", "E", "F", "F",
-             "!", "!", "N", "N", ",", ",", "K", "K",
-            "b", "b", "v", "v", "w", "w", "z", "z",
-            "h", "h", "f", "f", "s", "s", "x", "x",
-            "A", "A", "B", "B", "C", "C", "D", "D",
-            "E", "E", "F", "F"
+            "a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","A","B","C","D","E","F","G","H","I","J","K","L","M","N",
+            "a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","A","B","C","D","E","F","G","H","I","J","K","L","M","N"
+
         };
         public MenuForm()
         {
@@ -49,10 +42,10 @@ namespace Jogo_da_Memória
                 new JogoHardCodeForm().ShowDialog();
             } else if(nivel == "Normal")
             {
-                new JogoDinamicoForm(iconsNormal).ShowDialog();
+                new JogoDinamicoForm(iconsNormal, nivel).ShowDialog();
             } else if (nivel == "Difícil")
             {
-                new JogoDinamicoForm(iconsDificil).ShowDialog();
+                new JogoDinamicoForm(iconsDificil, nivel).ShowDialog();
             }
         }
     }

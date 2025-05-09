@@ -60,14 +60,16 @@
             // 
             timer1.Tick += timer1_Tick;
             // 
-            // Form1
+            // JogoHardCodeForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(765, 466);
             Controls.Add(tableLayoutPanel1);
-            Name = "Form1";
-            Text = "Nível 1";
+            Name = "JogoHardCodeForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Modo Fácil";
+            WindowState = FormWindowState.Maximized;
             ResumeLayout(false);
         }
 

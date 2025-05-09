@@ -83,7 +83,7 @@
             cmbNivel.Size = new Size(290, 53);
             cmbNivel.TabIndex = 0;
             // 
-            // Form3
+            // MenuForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -94,8 +94,10 @@
             Controls.Add(button1);
             Controls.Add(label1);
             DoubleBuffered = true;
-            Name = "Form3";
+            Name = "MenuForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Menu";
+            WindowState = FormWindowState.Maximized;
             groupBox1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();

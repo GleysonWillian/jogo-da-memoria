@@ -31,8 +31,6 @@
             components = new System.ComponentModel.Container();
             timer1 = new System.Windows.Forms.Timer(components);
             tableLayoutPanel1 = new TableLayoutPanel();
-            label1 = new Label();
-            tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -46,7 +44,6 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.666666F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.666666F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.666666F));
-            tableLayoutPanel1.Controls.Add(label1, 0, 0);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -58,29 +55,19 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 16.6666679F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 16.6666679F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel1.Size = new Size(837, 395);
+            tableLayoutPanel1.Size = new Size(888, 460);
             tableLayoutPanel1.TabIndex = 0;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(5, 2);
-            label1.Name = "label1";
-            label1.Size = new Size(13, 15);
-            label1.TabIndex = 0;
-            label1.Text = "c";
-            // 
-            // Form2
+            // JogoDinamicoForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(837, 395);
+            ClientSize = new Size(888, 460);
             Controls.Add(tableLayoutPanel1);
-            Name = "Form2";
-            Text = "Nível2";
-            Load += Form2_Load;
-            tableLayoutPanel1.ResumeLayout(false);
-            tableLayoutPanel1.PerformLayout();
+            Name = "JogoDinamicoForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Modo ???";
+            WindowState = FormWindowState.Maximized;
             ResumeLayout(false);
         }
 
@@ -88,6 +75,5 @@
 
         private System.Windows.Forms.Timer timer1;
         private TableLayoutPanel tableLayoutPanel1;
-        private Label label1;
     }
 }

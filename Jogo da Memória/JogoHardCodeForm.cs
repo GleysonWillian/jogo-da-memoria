@@ -147,6 +147,20 @@ namespace Jogo_da_Memória
                 if (iconLabel != null && iconLabel.ForeColor == iconLabel.BackColor)
                     return;
             }
+
+            DialogResult confirmResult = MessageBox.Show("Deseja jogar uma nova partida?", "Parabéns!", MessageBoxButtons.YesNo);
+
+            if (confirmResult == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Até a próxima!");
+                System.Windows.Forms.Application.Exit();
+            }
         }
+
+     
     }
 }

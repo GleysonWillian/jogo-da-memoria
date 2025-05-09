@@ -37,10 +37,11 @@ namespace Jogo_da_Memória
         }
 
         // icons deve sempre ter uma quantidade de elemento com raiz quadrada exata. exemplo.. 4, 9, 16, 25, 36, 49...
-        public JogoDinamicoForm(List<string> icons)
+        public JogoDinamicoForm(List<string> icons, string nivel)
         {
             this.icons = icons;
             InitializeComponent();
+            this.Text = "Modo " + nivel;
             CriarLabelsAutomaticamente();
             AssignIconsToSquares();
 
@@ -151,14 +152,18 @@ namespace Jogo_da_Memória
                         return;
                 }
             }
+            DialogResult confirmResult = MessageBox.Show("Deseja jogar uma nova partida?", "Parabéns!", MessageBoxButtons.YesNo);
 
-            MessageBox.Show("Você emparelhou todos os ícones!", "Parabéns!");
-            Close();
+            if (confirmResult == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Até a próxima!");
+                System.Windows.Forms.Application.Exit();
+            }
         }
 
-        private void Form2_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
