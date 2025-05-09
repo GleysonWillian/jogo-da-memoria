@@ -54,7 +54,7 @@ namespace Jogo_da_Memória
                         Text = "?",
                         Dock = DockStyle.Fill,
                         TextAlign = ContentAlignment.MiddleCenter,
-                        Font = new Font("Arial", 24, FontStyle.Bold),
+                        Font = new Font("Webdings", 60, FontStyle.Bold),
                         BackColor = Color.CornflowerBlue,
                         ForeColor = Color.CornflowerBlue,
                         BorderStyle = BorderStyle.FixedSingle
@@ -161,6 +161,9 @@ namespace Jogo_da_Memória
             }
         }
 
-     
+        private void JogoHardCodeForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

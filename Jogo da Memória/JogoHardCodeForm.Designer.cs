@@ -70,6 +70,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Modo Fácil";
             WindowState = FormWindowState.Maximized;
+            Load += JogoHardCodeForm_Load;
             ResumeLayout(false);
         }
 
